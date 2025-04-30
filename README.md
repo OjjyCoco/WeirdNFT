@@ -52,3 +52,20 @@ Allows the contract owner to securely withdraw all collected funds.
 
 ### `isWhitelisted(address _account, bytes32[] calldata _proof)`
 Internal view function to verify if an address is included in the Merkle Tree whitelist.
+
+## 🎨 NFT Generation
+
+The NFT images and metadata were generated using [**nftchef/art-engine**](https://github.com/nftchef/art-engine), a customizable node.js tool for generating generative art collections from layers.
+
+## 🧪 Tests
+
+Tests have been written using **Hardhat**, **Chai**, and **Ethers.js**.
+
+- ✅ **Contract deployment** with correct `baseURI` and `merkleRoot`
+- ✅ **Whitelist minting** using valid Merkle proof
+- ✅ Rejection of **non-whitelisted** minting attempts
+- ✅ Rejection of **underpaid** mint transactions
+- ✅ Full support for `pause()` and `unpause()` logic
+- ✅ Validation of `tokenURI` structure after mint
+- ✅ Enforcement of **owner-only access** to `setBaseURI`
+- ✅ Secure `withdraw()` functionality, restricted to contract owner
