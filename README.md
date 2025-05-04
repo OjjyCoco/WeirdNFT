@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://moccasin-general-crow-156.mypinata.cloud/ipfs/bafybeibcuex3mj7fbrybiri5wlrg3br5n5kdigqlgowhko36k7vrmuk7oi/0.png" alt="WeirdNFT#0 image" width="300"/>
+</p>
+
 # WeirdNFT
 
 **WeirdNFT** is an ERC721 smart contract written in Solidity, designed to manage a limited NFT collection with advanced features such as Merkle Tree-based whitelisting, paid minting, pausable functionality, and IPFS-based reveal system. A minting landing page might be created later on, for now we use scripts to interact with the contract.
@@ -20,12 +24,10 @@
 - **Merkle Tree** is used to validate whitelist participants. Participants are alloed to mint.
 - **Metadata URIs**: dynamically built as `ipfs://CID/{id}.json`
 
-## 🧰 Dependencies
+## 🚀 Deployment
 
-This contract uses OpenZeppelin libraries:
-- `ERC721`, `ERC721Enumerable`, `ERC721Pausable`
-- `Ownable`, `ReentrancyGuard`
-- `MerkleProof`, `Strings`
+- The contract has been deployed on the Sepolia testnet : [**Sepolia/WeirdNFT**](https://sepolia.etherscan.io/address/0x415f1F5495916957247e3C9BF5f953D9321c5fb5)
+- The owner has minted the first NFT for testing purpose : [**testnets.Opensea.io**](https://testnets.opensea.io/0xeBeD07e7187Ad23c676225C63279955f73AbBb45)
 
 ## 🔧 Main Functions
 
@@ -70,7 +72,9 @@ Tests have been written using **Hardhat**, **Chai**, and **Ethers.js**.
 - ✅ Enforcement of **owner-only access** to `setBaseURI`
 - ✅ Secure `withdraw()` functionality, restricted to contract owner
 
-## 🚀 Deployment
+## 🧰 Dependencies
 
-- The contract has been deployed on the Sepolia testnet : [**Sepolia/WeirdNFT**](https://sepolia.etherscan.io/address/0x415f1F5495916957247e3C9BF5f953D9321c5fb5#readContract)
-- The owner has minted the first NFT for testing purpose : [**testnets.Opensea.io**](https://testnets.opensea.io/0xeBeD07e7187Ad23c676225C63279955f73AbBb45)
+This contract uses OpenZeppelin libraries:
+- `ERC721`, `ERC721Enumerable`, `ERC721Pausable`
+- `Ownable`, `ReentrancyGuard`
+- `MerkleProof`, `Strings`
