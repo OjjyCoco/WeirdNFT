@@ -13,9 +13,9 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract WeirdNFT is ERC721, ERC721Pausable, ERC721Enumerable, Ownable, ReentrancyGuard {
     using Strings for uint;
     uint256 private _nextTokenId;
-    uint8 private constant MAX_SUPPLY = 50;
-    uint256 private constant PRICE_PER_NFT = 1.2 ether; // change to usd later using Chainlink data feed
-    string public baseURI; // ipfs://CID/
+    uint8 private constant MAX_SUPPLY = 99;
+    uint256 private constant PRICE_PER_NFT = 0.01 ether; // set constant USD price later, using Chainlink ETH price feed
+    string public baseURI; // ipfs://bafybeib43275il24ahvkomop2mc4f3k67cklgemsxgjjffm7b7q3clf64u/
 
     bytes32 public merkleRoot;
 

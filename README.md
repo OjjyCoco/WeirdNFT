@@ -1,6 +1,6 @@
 # WeirdNFT
 
-**WeirdNFT** is an ERC721 smart contract written in Solidity, designed to manage a limited NFT collection with advanced features such as Merkle Tree-based whitelisting, paid minting, pausable functionality, and IPFS-based reveal system.
+**WeirdNFT** is an ERC721 smart contract written in Solidity, designed to manage a limited NFT collection with advanced features such as Merkle Tree-based whitelisting, paid minting, pausable functionality, and IPFS-based reveal system. A minting landing page might be created later on, for now we use scripts to interact with the contract.
 
 ## ✨ Features
 
@@ -15,8 +15,8 @@
 
 ## 📜 Technical Details
 
-- **Max supply**: 50 NFTs
-- **Mint price**: 1.2 ETH *(can be updated to a USD-based dynamic price using Chainlink in future versions)*
+- **Max supply**: 100 NFTs
+- **Mint price**: 0.01 ETH *(can be updated to a USD-based dynamic price using Chainlink in future versions)*
 - **Merkle Tree** is used to validate whitelist participants. Participants are alloed to mint.
 - **Metadata URIs**: dynamically built as `ipfs://CID/{id}.json`
 
@@ -69,3 +69,8 @@ Tests have been written using **Hardhat**, **Chai**, and **Ethers.js**.
 - ✅ Validation of `tokenURI` structure after mint
 - ✅ Enforcement of **owner-only access** to `setBaseURI`
 - ✅ Secure `withdraw()` functionality, restricted to contract owner
+
+## 🚀 Deployment
+
+- The contract has been deployed on the Sepolia testnet : [**Sepolia/WeirdNFT**](https://sepolia.etherscan.io/address/0x415f1F5495916957247e3C9BF5f953D9321c5fb5#readContract)
+- The owner has minted the first NFT for testing purpose : [**testnets.Opensea.io**](https://testnets.opensea.io/0xeBeD07e7187Ad23c676225C63279955f73AbBb45)

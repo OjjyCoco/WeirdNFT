@@ -82,7 +82,7 @@ describe("WeirdNFT", function () {
 
       await expect(
         weirdNFT.connect(user1).safeMint(address, proof, {
-          value: ethers.parseEther("0.1"),
+          value: ethers.parseEther("0.005"),
         })
       ).to.be.revertedWith("Not enough funds");
     });

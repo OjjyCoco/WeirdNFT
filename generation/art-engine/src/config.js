@@ -17,7 +17,7 @@ const layersDir = path.join(basePath, "/layers");
 
 const description =
   "Weird NFT collection, a Nathan's sample project";
-const baseUri = "ipfs://bafybeiec2lhfysofff7y4o55wmlmwgjoshvg4z6hjgqqpivlpbc65y5ac4";
+const baseUri = "ipfs://bafybeibcuex3mj7fbrybiri5wlrg3br5n5kdigqlgowhko36k7vrmuk7oi";
 
 const outputJPEG = false; // if false, the generator outputs png's
 
