@@ -27,6 +27,7 @@
 ## 🚀 Deployment
 
 - The contract has been deployed on the Sepolia testnet : [**Sepolia/WeirdNFT**](https://sepolia.etherscan.io/address/0x415f1F5495916957247e3C9BF5f953D9321c5fb5)
+- App interface has been deployed using AWS Amplify : [**WeirdNFT App**](https://master.d2k68jp0vzz3dq.amplifyapp.com/)
 - The owner has minted the first NFT for testing purpose : [**testnets.Opensea.io**](https://testnets.opensea.io/0xeBeD07e7187Ad23c676225C63279955f73AbBb45)
 
 ## 🔧 Main Functions
