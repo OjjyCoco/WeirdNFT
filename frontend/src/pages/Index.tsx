@@ -113,7 +113,7 @@ const Index = () => {
           </div>
         </div>
         <div className="max-w-7xl mx-auto mt-8 pt-8 border-t border-white/10 text-center text-white/60 text-sm">
-          <p>© 2025 WeirdNFT. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} WeirdNFT. All rights reserved.</p>
         </div>
       </footer>
     </div>
