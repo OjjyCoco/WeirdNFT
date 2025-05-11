@@ -30,32 +30,6 @@
 - App interface has been deployed using AWS Amplify : [**WeirdNFT App**](https://master.d2k68jp0vzz3dq.amplifyapp.com/)
 - The owner has minted the first NFT for testing purpose : [**testnets.Opensea.io**](https://testnets.opensea.io/0xeBeD07e7187Ad23c676225C63279955f73AbBb45)
 
-## 🔧 Main Functions
-
-### `safeMint(address to, bytes32[] calldata _proof)`
-Allows a whitelisted address to mint a new NFT. Requirements:
-- A valid Merkle proof
-- Sufficient payment (`>= 1.2 ether`)
-- Contract must not be paused
-- Supply must not be exceeded
-
-Returns the minted token ID.
-
-### `pause()` / `unpause()`
-Owner-only functions to pause and resume minting operations.
-
-### `setBaseURI(string memory _baseURI)`
-Sets the base URI for token metadata. Useful for *revealing* IPFS metadata.
-
-### `tokenURI(uint _tokenId)`
-Returns the full metadata URI for a given token. Example: `ipfs://CID/1.json`
-
-### `withdraw()`
-Allows the contract owner to securely withdraw all collected funds.
-
-### `isWhitelisted(address _account, bytes32[] calldata _proof)`
-Internal view function to verify if an address is included in the Merkle Tree whitelist.
-
 ## 🎨 NFT Generation
 
 The NFT images and metadata were generated using [**nftchef/art-engine**](https://github.com/nftchef/art-engine), a customizable node.js tool for generating generative art collections from layers.
@@ -72,10 +46,3 @@ Tests have been written using **Hardhat**, **Chai**, and **Ethers.js**.
 - ✅ Validation of `tokenURI` structure after mint
 - ✅ Enforcement of **owner-only access** to `setBaseURI`
 - ✅ Secure `withdraw()` functionality, restricted to contract owner
-
-## 🧰 Dependencies
-
-This contract uses OpenZeppelin libraries:
-- `ERC721`, `ERC721Enumerable`, `ERC721Pausable`
-- `Ownable`, `ReentrancyGuard`
-- `MerkleProof`, `Strings`
