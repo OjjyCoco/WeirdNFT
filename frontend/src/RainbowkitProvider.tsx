@@ -1,4 +1,3 @@
-'use client'
 import { ReactNode } from 'react';
 import '@rainbow-me/rainbowkit/styles.css';
 import {
@@ -7,11 +6,12 @@ import {
   lightTheme
 } from '@rainbow-me/rainbowkit';
 import { WagmiProvider } from 'wagmi';
-import { hardhat } from 'wagmi/chains';
+import { hardhat, sepolia } from 'wagmi/chains';
 import {
   QueryClientProvider,
   QueryClient,
 } from "@tanstack/react-query";
+import { http } from 'viem';
 // import { hardhat } from 'viem/chains';
 //import { sepolia } from '@/utils/sepolia';
 // import { configSepolia } from '@/utils/wagmi';
@@ -21,9 +21,15 @@ interface CustomRainbowKitProviderProps {
 }
 
 const config = getDefaultConfig({
-    appName: 'My RainbowKit App',
+    appName: 'weirdNFT',
     projectId: 'f10a5b5a8d5f4a76c9bf64db19426141',
-    chains: [hardhat],
+    chains: [
+      hardhat,
+      sepolia
+    ],
+    transports: {
+      [sepolia.id]: http(import.meta.env.SEPOLIA_RPC_URL),
+    },
     ssr: true, // If your dApp uses server side rendering (SSR)
   });
 

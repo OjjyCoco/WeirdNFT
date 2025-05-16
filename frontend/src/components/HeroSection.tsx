@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { Link } from "react-scroll"
+import { Link } from "react-scroll";
 
 const HeroSection: React.FC = () => {
   return (

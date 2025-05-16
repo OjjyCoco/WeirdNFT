@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
+import { Link } from "react-scroll";
 
 interface NFTCardProps {
   id: string;
@@ -35,12 +35,14 @@ const NFTCard: React.FC<NFTCardProps> = ({ id, title, image, price, available })
             <p className="text-weird-purple font-medium">{price} ETH</p>
           </div>
         </div>
+        <Link to="mint" smooth={true} duration={500}>
         <Button 
           className={`w-full ${available ? 'bg-gradient-weird hover:opacity-90' : 'bg-muted cursor-not-allowed'}`} 
           disabled={!available}
         >
           {available ? 'Mint Now' : 'Sold Out'}
         </Button>
+        </Link>
       </div>
     </div>
   );

@@ -121,6 +121,9 @@ const MintingInterface: React.FC = () => {
         <div className="mt-8 p-4 border border-yellow-200 rounded-lg bg-yellow-50 text-yellow-800 text-sm">
           <p className="font-medium">Note: This is a demo minting interface.</p>
           <p>In a real NFT project, this would connect to your wallet and interact with the blockchain.</p>
+          <p>However, as the collection is paused, the button simulates a successfull minting.</p>
+          <p>You are probably not in the contract whitelist, therefore the transaction would fail anyway.</p>
+          <p>In production, this button would open your wallet, ask for transaction confirmation, and communicates with the deployed contract.</p>
         </div>
       </div>
     </section>
